@@ -1,6 +1,5 @@
 const form = document.getElementById("search-form");
 const urlInput = document.getElementById("youtube-url");
-const excludeSameChannel = document.getElementById("exclude-same-channel");
 const submitButton = document.getElementById("submit-button");
 const statusEl = document.getElementById("status");
 const sourceSection = document.getElementById("source-section");
@@ -138,7 +137,6 @@ form.addEventListener("submit", async (event) => {
       body: JSON.stringify({
         youtube_url: youtubeUrl,
         language: "en",
-        exclude_same_channel: excludeSameChannel.checked,
       }),
     });
 

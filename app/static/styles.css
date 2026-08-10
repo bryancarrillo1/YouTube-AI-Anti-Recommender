@@ -72,18 +72,6 @@ header h1 {
   color: inherit;
 }
 
-.settings {
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
-.checkbox {
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-}
-
 button {
   justify-self: start;
   padding: 0.75rem 1rem;
