@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>YouTube Anti-Recommender</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>YouTube Anti-Recommender</h1>
+        <p class="lede">
+          Paste a YouTube video URL to discover intentional alternatives across topic, tone, format, and activity.
+        </p>
+      </header>
+
+      <form id="search-form" class="search-form" novalidate>
+        <label for="youtube-url">YouTube video URL</label>
+        <input
+          id="youtube-url"
+          name="youtube_url"
+          type="url"
+          inputmode="url"
+          placeholder="https://www.youtube.com/watch?v=..."
+          required
+          autocomplete="off"
+        />
+
+        <fieldset class="settings">
+          <legend>Settings</legend>
+          <label class="checkbox">
+            <input id="exclude-same-channel" type="checkbox" />
+            Exclude videos from the source channel
+          </label>
+        </fieldset>
+
+        <button type="submit" id="submit-button">Find a different direction</button>
+      </form>
+
+      <div id="status" class="status" aria-live="polite" aria-atomic="true"></div>
+
+      <section id="source-section" class="panel hidden" aria-labelledby="source-heading">
+        <h2 id="source-heading">Source video</h2>
+        <div id="source-content"></div>
+      </section>
+
+      <section id="concepts-section" class="panel hidden" aria-labelledby="concepts-heading">
+        <h2 id="concepts-heading">Discovery directions</h2>
+        <div id="concepts-content" class="chips"></div>
+        <p id="source-interpretation" class="muted"></p>
+      </section>
+
+      <section id="results-section" class="panel hidden" aria-labelledby="results-heading">
+        <h2 id="results-heading">Anti-recommendations</h2>
+        <p id="limited-message" class="muted hidden"></p>
+        <ul id="results-list" class="results-list"></ul>
+      </section>
+
+      <footer class="footer">
+        <p>
+          Results are generated from public metadata and YouTube search. They are exploratory suggestions, not factual judgments about creators or videos.
+        </p>
+        <p>
+          Privacy: your submitted URL is sent to this server. Relevant metadata is sent to Gemini to form search concepts.
+        </p>
+      </footer>
+    </main>
+    <script src="/static/app.js" defer></script>
+  </body>
+</html>

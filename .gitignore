@@ -1,0 +1,16 @@
+# Environment variables
+.env
+
+# Virtual environment
+.venv/
+
+# Python
+__pycache__/
+*.egg-info/
+.pytest_cache/
+
+# Mac OS
+.DS_Store
+
+# Cursor
+.cursor/
