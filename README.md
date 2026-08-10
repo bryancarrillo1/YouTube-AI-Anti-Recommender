@@ -62,6 +62,8 @@ Request:
 }
 ```
 
+`exclude_same_channel` is an optional API field (default: false). It is not currently exposed in the web UI.
+
 Successful response includes:
 
 - `source_video`
