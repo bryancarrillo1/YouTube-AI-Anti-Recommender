@@ -83,13 +83,21 @@ Documented error codes:
 
 ## Docker
 
+Build the docker container
 ```bash
 docker build -t youtube-anti-recommender .
+```
+Run it using:
+```bash
 docker run --rm -p 8080:8080 \
   -e YOUTUBE_API_KEY=your_key \
   -e GEMINI_API_KEY=your_key \
   -e GEMINI_MODEL=gemini-2.0-flash \
   youtube-anti-recommender
+```
+or 
+```bash
+docker run --rm -p 8080:8080 --env-file .env youtube-anti-recommender
 ```
 
 Deploy the container to any host that supports Docker (Railway, Fly.io, Cloud Run, etc.) and inject the same environment variables at runtime.

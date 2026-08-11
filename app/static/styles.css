@@ -8,7 +8,6 @@
   --accent: #2563eb;
   --accent-dark: #1d4ed8;
   --error: #b42318;
-  --focus: #fbbf24;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -90,12 +89,6 @@ button:hover {
 button:disabled {
   opacity: 0.7;
   cursor: not-allowed;
-}
-
-button:focus-visible,
-input:focus-visible {
-  outline: 3px solid var(--focus);
-  outline-offset: 2px;
 }
 
 .status {
