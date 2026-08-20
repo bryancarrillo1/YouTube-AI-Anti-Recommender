@@ -10,6 +10,7 @@ class ContrastDimension(str, Enum):
     FORMAT = "format"
     CONSUMPTION = "consumption"
     TONE = "tone"
+    SCALE = "scale"
     PERSPECTIVE = "perspective"
 
 
